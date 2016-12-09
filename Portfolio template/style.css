@@ -1,0 +1,195 @@
+/*
+font-family: 'Cookie', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  color: #535559;
+  background-color: #F1F5F7;
+}
+
+
+/* -------- NAVIGATION BAR ------------ */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid black;
+  background-color: #1A1C1D;
+  font-size: 14px;
+}
+
+.navbar>ul {
+  margin: 0 0 0 -40px;
+}
+
+.navbar>ul>a>li {
+  display: block;
+  height: 50px;
+  width: 100px;
+  float: left;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  padding: 15px 0 15px 0;
+  border-right: 1px solid #151617;
+  background-color: #1A1C1D;
+}
+
+.navbar>ul>a>li:hover {
+  color: grey;
+}
+
+.navbar>ul>li>a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.row1 {
+  margin-top: 50px;
+}
+
+
+/* -------- FLEX & MEDIA SCREEN ------------ */
+
+@media screen and (min-width: 769px) {
+  .flexKeeper {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .flex-item {
+    width: 50%;
+    min-height: 100vh;
+  }
+  .row1 {
+    min-height: 100vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flexKeeper {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .row1>.left,
+  .row2>.right,
+  .row3>.left {
+    height: 300px;
+  }
+  .reverse:nth-of-type(2) {
+    order: -1;
+  }
+}
+
+
+/* -------- CONTENT ------------ */
+
+.flex-item {
+  padding: 20px;
+}
+
+
+/* -------- ROW 1 ------------ */
+
+.row1>.left {
+  background: #1BBC9B url(http://img.wallpaperfolder.com/f/51EC381E197D/grandiose-1280-720-1366x768-mountain-view-pc.jpg) no-repeat right center;
+  background-size: cover;
+  font-family: 'Cookie', cursive;
+  font-size: 70px;
+  color: white;
+}
+
+.flex-item {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #336E7B;
+  text-align: center;
+}
+
+
+/* -------- ROW 2 & 3 ------------ */
+
+.row2>.right,
+.row3>.left {
+  font-family: 'Cookie', cursive;
+  font-size: 70px;
+  color: white;
+}
+
+.row2>.right {
+  background-color: #E74C3C;
+}
+
+.row3>.left {
+  background-color: #22313F;
+}
+
+
+/* -------- PORTFOLIO ITEMS ------------ */
+
+.portfolioIt {
+  flex-flow: row wrap;
+}
+
+.portfolioItem {
+  width: 150px;
+  background-color: white;
+  padding: 5px 0 0 0;
+  box-shadow: 1px 1px 6px DarkGray;
+  cursor: pointer;
+}
+
+.portfolioItem>img {
+  width: 150px;
+}
+
+figcaption {
+  padding: 5px;
+  text-align: center;
+}
+
+
+/* -------- SOCIAL BUTTONS ------------ */
+
+.text-content>a {
+  display: block;
+  margin: 30px 0 30px 0;
+  padding: 15px;
+  border-radius: 3px;
+  text-align: center;
+  background: -moz-linear-gradient(left, rgba(0, 144, 196, 1) 0%, rgba(0, 144, 196, 1) 17%, rgba(0, 158, 216, 1) 17%, rgba(0, 158, 216, 1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 144, 196, 1)), color-stop(17%, rgba(0, 144, 196, 1)), color-stop(17%, rgba(0, 158, 216, 1)), color-stop(100%, rgba(0, 158, 216, 1)));
+  background: -webkit-linear-gradient(left, rgba(0, 144, 196, 1) 0%, rgba(0, 144, 196, 1) 17%, rgba(0, 158, 216, 1) 17%, rgba(0, 158, 216, 1) 100%);
+  background: -o-linear-gradient(left, rgba(0, 144, 196, 1) 0%, rgba(0, 144, 196, 1) 17%, rgba(0, 158, 216, 1) 17%, rgba(0, 158, 216, 1) 100%);
+  background: -ms-linear-gradient(left, rgba(0, 144, 196, 1) 0%, rgba(0, 144, 196, 1) 17%, rgba(0, 158, 216, 1) 17%, rgba(0, 158, 216, 1) 100%);
+  color: white;
+  text-decoration: none;
+}
+
+.text-content>a>span {
+  display: block;
+  width: 20px;
+  padding-right: 35px;
+  float: left;
+}
